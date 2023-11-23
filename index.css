@@ -1,0 +1,205 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500&display=swap');
+*{
+    margin : 0;
+    padding : 0;
+    box-sizing: border-box;
+}
+
+/* :root , html */
+:root{
+    font-family: 'Poppins', sans-serif;
+    font-size : 62.5%;
+    /* color : #2f3640; */
+    /* color : white; */
+    /* color : black; */
+    color : #3d3d3d;
+}
+
+/* styling html basic elements  */
+ul li{
+    list-style: none;
+}
+
+p,li{
+    font-size: 1.6rem;
+    margin-bottom : .5em;
+    letter-spacing: .020em;
+}
+h1,h2,h3{
+    letter-spacing: .015em;
+    margin-bottom : .3em
+}
+
+a{
+    text-decoration: none;
+    color : black;
+}
+
+/* ##################### utility classes ############### */
+
+body{
+    width : 100%;
+    min-height : 100vh;
+    background-color: rgba(128, 128, 128, 0.126);
+    
+}
+.container{
+    max-width : 1200px;
+    width : 85%;
+    margin : auto;
+    /* background-color: rgba(128, 128, 128, 0.126); */
+}
+
+.white{
+    color : white;
+}
+.bg-blue{
+    background-color: #40739e;
+}
+.black{
+    color : #2f3640;
+}
+.fw-400{
+    font-weight : 400;
+}
+.fw-500{
+    font-weight: 500;
+}
+.fw-300{
+    font-weight: 300;
+}
+.text-center{
+    text-align: center;
+}
+.capitalize{
+    text-transform: capitalize;
+}
+
+.lg-heading{
+    font-size: 5.2rem;
+}
+.md-heading{
+    font-size: 2.8rem;
+}
+.md-sm-heading{
+    font-size: 2.1rem;
+}
+.small-text{
+    font-size: 1.2rem;
+}
+.normal-text{
+    font-size: 1.6rem;
+}
+.black{
+    color : #3d3d3d;
+}
+
+.yellow{
+    color : #e1b12c;
+}
+
+/* ####################### styling begins here ###################### */
+.heading{
+    padding : 2rem 0;
+}
+
+.game-container{
+    /* border : 2px solid red; */
+    display: flex;
+    justify-content: space-evenly;
+    position: absolute;
+    top : 50%;
+    left : 50%;
+    transform: translate(-50% , -50%);
+    width : 80%;
+    flex-wrap: wrap;
+}
+.boxes{
+    /* border: 2px solid green; */
+    display: grid;
+    grid-template-columns: repeat(3 , 8vw);
+    grid-template-rows: repeat(3 , 8vw);
+}
+
+.box{
+    border: 3px solid #2f3640;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    font-weight: 600;
+    color : #e1b12c;
+    
+}
+.bt-0{
+    border-top :0;
+}
+.br-0{
+    border-right: 0;
+}
+.bl-0{
+    border-left: 0;
+}
+.bb-0{
+    border-bottom: 0;
+}
+
+.btn button{
+    border : none;
+    outline: none;
+    background-color: #e1b12c;
+    color : white;
+    border-radius: .5rem;
+    display: inline-block;
+    margin-left: 1rem;
+    padding: .6em 2.5em;
+    font-weight: 300;
+    cursor: pointer;
+    text-transform: capitalize;
+    font-family: 'Poppins', sans-serif;
+}
+
+.img-box{
+    /* border: 2px solid red; */
+    margin-top: 2rem;
+    /* width : 100%; */
+    width :0;
+    height : 20rem;
+    overflow: hidden;
+    border-radius: 1rem;
+    box-shadow: 0px 0px 5px rgba(0, 0, 0, 0.178);
+    transition: width .3s ease-in-out;
+}
+.img-box img{
+    width : 100%;
+    height : 100%;
+    object-fit: cover;
+    object-position: center;
+}
+
+
+@media (max-width : 500px){
+    :root{
+        font-size: 9px;
+    }
+
+    .boxes{
+        /* border: 2px solid green; */
+        /* display: grid; */
+        grid-template-columns: repeat(3 , 25vw);
+        grid-template-rows: repeat(3 , 25vw);
+    }
+
+    .game-info{
+        /* border: 2px solid red; */
+        margin-top: 3rem;
+        width : 100%;
+        text-align: center;
+    }
+    .game-container{
+        /* border: 2px solid red; */
+        width : 90%;
+        margin-top : 5rem;
+    }
+}
+
